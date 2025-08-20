@@ -79,7 +79,33 @@ class Program
 
           pets.Add(c);
           break;
-              
+
+        case "3":
+          if (pets.Count == 0)
+          {
+              Console.WriteLine("No pets registered.");
+          }
+          else
+          {
+              Console.WriteLine("Registered pets:");
+              foreach (var pet in pets)
+              {
+                  Console.WriteLine($"Type: {pet.GetType().Name}");
+                  Console.WriteLine($"Name: {pet.Name}");
+                  Console.WriteLine($"Age: {pet.Age}");
+                  Console.WriteLine($"Owner: {pet.OwnerName}");
+
+                  if (pet is Dog dog)
+                      Console.WriteLine($"Breed: {dog.Breed}");
+                  else if (pet is Cat cat)
+                      Console.WriteLine($"Color: {cat.Color}");
+
+                  Console.WriteLine("-------------------");
+              }
+          }
+          Console.WriteLine("Press any key to continue...");
+          Console.ReadKey();
+          break;
       }
     }
   }
