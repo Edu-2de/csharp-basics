@@ -1,0 +1,47 @@
+# Ignore build output
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore Rider settings
+.idea/
+
+# Ignore NuGet packages
+*.nupkg
+packages/
+.nuget/
+
+# Ignore logs
+*.log
+
+# Ignore test results
+TestResults/
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Ignore generated files
+Generated_Code_*
+
+# Ignore publish output
+publish/
+
+# Ignore coverage reports
+coverage/
+*.coverage
+*.coveragexml
+
+# Ignore other system files
+Thumbs.db
+Desktop.ini
