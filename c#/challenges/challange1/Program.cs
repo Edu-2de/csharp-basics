@@ -58,7 +58,7 @@ public class RightTriangle : Shape
     }
 }
 
-class Program1
+class Program
 {
     static double ReadPositiveValue(string message)
     {
