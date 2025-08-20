@@ -15,3 +15,13 @@ public abstract class Dog : Pet
   }
 
 }
+
+public abstract class Cat : Pet
+{
+  public string Color { get; set; }
+  public Meow ()
+  {
+    return Console.ReadLine("Meow mEow MEoW");
+  }
+
+}
