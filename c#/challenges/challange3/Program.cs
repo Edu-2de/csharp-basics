@@ -62,6 +62,23 @@ class Program
 
           pets.Add(d);
           break;
+
+        case "2":
+          Cat c = new();
+          Console.WriteLine("Enter cat's name:");
+          c.Name = Console.ReadLine();
+
+          Console.WriteLine("Enter cat's age:");
+          c.Age = int.Parse(Console.ReadLine());
+
+          Console.WriteLine("Enter cat's owner name:");
+          c.OwnerName = Console.ReadLine();
+
+          Console.WriteLine("Enter cat's color:");
+          c.Color = Console.ReadLine();
+
+          pets.Add(c);
+          break;
               
       }
     }
