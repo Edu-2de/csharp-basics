@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-public abstract class Pet
+﻿public abstract class Pet
 {
     public string? Name { get; set; }
     public int Age { get; set; }
