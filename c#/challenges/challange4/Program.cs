@@ -178,18 +178,23 @@ public class Program
 
           foreach (var media in medias)
           {
-            if (!string.IsNullOrEmpty(pet.Name) && pet.Name.Equals(searchName, StringComparison.OrdinalIgnoreCase))
+            if (!string.IsNullOrEmpty(pet.Title) && pet.Title.Equals(searchTitle, StringComparison.OrdinalIgnoreCase))
             {
               found = true;
-              if (pet is Dog dog)
+              if (media is Book book)
               {
-                Console.WriteLine("Dog sound:");
-                Dog.Bark();
+                Console.WriteLine("Book: ");
+                Book.ShowSummary();
               }
-              else if (pet is Cat cat)
+              else if (media is Movie movie)
               {
-                Console.WriteLine("Cat sound:");
-                Cat.Meow();
+                Console.WriteLine("Movie: ");
+                Movie.PlayTrailer();
+              }
+              else if (media is Music music)
+              {
+                Console.WriteLine("Music: ");
+                Music.PlaySample();
               }
               break;
             }
