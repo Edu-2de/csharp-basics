@@ -91,13 +91,13 @@ public class Program
           m.Name = Console.ReadLine() ?? string.Empty;
 
           Console.WriteLine("Enter movie's year:");
-          string? bookYearInput = Console.ReadLine();
-          if (!int.TryParse(bookYearInput, out int bookYear))
+          string? movieYearInput = Console.ReadLine();
+          if (!int.TryParse(movieYearInput, out int movieYear))
           {
             Console.WriteLine("Invalid value entered. Setting value to 0.");
-            bookYear = 0;
+            movieYear = 0;
           }
-          m.Year = bookYear;
+          m.Year = movieYear;
 
           Console.WriteLine("Enter movie's director:");
           m.AuthorOrDirector = Console.Readline() ?? string.Empty;
@@ -114,11 +114,11 @@ public class Program
           mediaItems.Add(m);
           break;
         case "3":
-          Movie m = new();
-          Console.WriteLine("Enter movie's title:");
+          Music m = new();
+          Console.WriteLine("Enter music's title:");
           m.Name = Console.ReadLine() ?? string.Empty;
 
-          Console.WriteLine("Enter movie's year:");
+          Console.WriteLine("Enter music's year:");
           string? bookYearInput = Console.ReadLine();
           if (!int.TryParse(bookYearInput, out int bookYear))
           {
