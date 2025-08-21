@@ -145,11 +145,14 @@ public class Program
             Console.WriteLine("Registered medias:");
             foreach (var media in mediaItems)
             {
-              Console.WriteLine($"Title: {media.GetType().Title}");
-              Console.WriteLine($"Year: {media.GetType().Year}");
-              Console.WriteLine($"AuthorOrDirector: {media.GetType().AuthorOrDirector}");
+              Console.WriteLine($"Title: {media.Title}");
+              Console.WriteLine($"Year: {media.Year}");
+              Console.WriteLine($"AuthorOrDirector: {media.AuthorOrDirector}");
 
-              
+              if (media is Book book)
+              {
+                Console.WriteLine($"Number of pages: {media.NumberOfPages}");
+              }
 
             }
           }
