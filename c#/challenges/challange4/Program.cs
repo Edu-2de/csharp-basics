@@ -24,3 +24,13 @@ public class Movie : MediaItem
     Console.WriteLine("Trailer played");
   }
 }
+
+public class Music : MediaItem
+{
+  public string? Genre { get; set; }
+
+  public static void PlaySample()
+  {
+    Console.WriteLine("Music played");
+  }
+}
