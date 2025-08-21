@@ -81,6 +81,9 @@ public class Program
             bookNumber = 0;
           }
           m.NumberOfPages = bookNumber;
+
+          mediaItems.Add(m);
+          break;
           
 
           
