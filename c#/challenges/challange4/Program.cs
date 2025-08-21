@@ -145,7 +145,12 @@ public class Program
             Console.WriteLine("Registered medias:");
             foreach (var media in mediaItems)
             {
+              Console.WriteLine($"Title: {media.GetType().Title}");
+              Console.WriteLine($"Year: {media.GetType().Year}");
+              Console.WriteLine($"AuthorOrDirector: {media.GetType().AuthorOrDirector}");
+
               
+
             }
           }
           break;
