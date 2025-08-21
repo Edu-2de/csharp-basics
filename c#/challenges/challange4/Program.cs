@@ -136,7 +136,7 @@ public class Program
 
           mediaItems.Add(m);
           break;
-          
+
         case "4":
           if (mediaItems.Count == 0)
           {
@@ -169,6 +169,13 @@ public class Program
           }
           Console.WriteLine("Press any key to continue...");
           Console.ReadKey();
+          break;
+
+        case "5":
+          Console.WriteLine("Enter the media's title:");
+          string searchTitle = Console.ReadLine() ?? string.Empty;
+          bool found = false;
+          
           break;
 
         default:
