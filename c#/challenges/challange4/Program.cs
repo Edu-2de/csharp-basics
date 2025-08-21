@@ -113,6 +113,7 @@ public class Program
 
           mediaItems.Add(m);
           break;
+
         case "3":
           Music m = new();
           Console.WriteLine("Enter music's title:");
@@ -135,6 +136,7 @@ public class Program
 
           mediaItems.Add(m);
           break;
+          
         case "4":
           if (mediaItems.Count == 0)
           {
