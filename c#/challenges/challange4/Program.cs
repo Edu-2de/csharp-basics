@@ -60,6 +60,18 @@ public class Program
           MediaItem m = new();
           Console.WriteLine("Enter book's title:");
           m.Name = Console.ReadLine() ?? string.Empty;
+
+          Console.WriteLine("Enter book's year:");
+          string? bookYearInput = Console.ReadLine();
+          if (!int.TryParse(bookYearInput, out int bookYear))
+          {
+            Console.WriteLine("Invalid age entered. Setting age to 0.");
+            bookYear = 0;
+          }
+          m.Year = bookYear;
+          
+
+          
       }
     }
   }
