@@ -11,7 +11,7 @@ public class Book : MediaItem
 
   public static void ShowSummary()
   {
-    Console.WriteLine($"Title: {Title}, Number of pages: {NumberOfPages}");
+    Console.WriteLine($"Number of pages: {NumberOfPages}");
   }
 }
 
@@ -59,7 +59,7 @@ public class Program
         case "1":
           Book m = new();
           Console.WriteLine("Enter book's title:");
-          m.Name = Console.ReadLine() ?? string.Empty;
+          m.Title = Console.ReadLine() ?? string.Empty;
 
           Console.WriteLine("Enter book's year:");
           string? bookYearInput = Console.ReadLine();
@@ -88,7 +88,7 @@ public class Program
         case "2":
           Movie m = new();
           Console.WriteLine("Enter movie's title:");
-          m.Name = Console.ReadLine() ?? string.Empty;
+          m.Title = Console.ReadLine() ?? string.Empty;
 
           Console.WriteLine("Enter movie's year:");
           string? movieYearInput = Console.ReadLine();
@@ -117,7 +117,7 @@ public class Program
         case "3":
           Music m = new();
           Console.WriteLine("Enter music's title:");
-          m.Name = Console.ReadLine() ?? string.Empty;
+          m.Title  = Console.ReadLine() ?? string.Empty;
 
           Console.WriteLine("Enter music's year:");
           string? musicYearInput = Console.ReadLine();
