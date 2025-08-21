@@ -84,12 +84,35 @@ public class Program
 
           mediaItems.Add(m);
           break;
-          
 
-          
-          
+        case "2":
+          Movie m = new();
+          Console.WriteLine("Enter movie's title:");
+          m.Name = Console.ReadLine() ?? string.Empty;
 
+          Console.WriteLine("Enter movie's year:");
+          string? bookYearInput = Console.ReadLine();
+          if (!int.TryParse(bookYearInput, out int bookYear))
+          {
+            Console.WriteLine("Invalid value entered. Setting value to 0.");
+            bookYear = 0;
+          }
+          m.Year = bookYear;
 
+          Console.WriteLine("Enter movie's director:");
+          m.AuthorOrDirector = Console.Readline() ?? string.Empty;
+
+          Console.WriteLine("Enter movie's duration:");
+          string? movieDurationInput = Console.Readline();
+          if (!int.TryParse(movieDurationInput, out int movieDuration))
+          {
+            Console.WriteLine("Invalid value entered. Setting value to 0.");
+            movieDuration = 0;
+          }
+          m.Duration = movieDuration;
+
+          mediaItems.Add(m);
+          break;
       }
     }
   }
