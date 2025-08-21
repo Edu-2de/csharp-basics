@@ -14,3 +14,13 @@ public class Book : MediaItem
     Console.WriteLine($"Title: {Title}, Number of pages: {NumberOfPages}");
   }
 }
+
+public class Movie : MediaItem
+{
+  public int Duration { get; set; }
+
+  public static void PlayTrailer()
+  {
+    Console.WriteLine("Trailer played");
+  }
+}
