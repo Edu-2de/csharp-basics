@@ -34,3 +34,33 @@ public class Music : MediaItem
     Console.WriteLine("Music played");
   }
 }
+
+public class Program
+{
+  public static void Main()
+  {
+    var mediaItems = new List<MediaItem>();
+    bool exit = false;
+
+    while (!exit)
+    {
+      Console.Clear();
+      Console.WriteLine("1 - Add new Book");
+      Console.WriteLine("2 - Add new Movie");
+      Console.WriteLine("3 - Add new Music");
+      Console.WriteLine("4 - List all media items");
+      Console.WriteLine("5 - Show details and play");
+      Console.WriteLine("6 - Exit");
+      Console.WriteLine("Choose an option:");
+      string option = Console.ReadLine() ?? string.Empty;
+
+      switch (option)
+      {
+        case "1":
+          MediaItem m = new();
+          Console.WriteLine("Enter book's title:");
+          m.Name = Console.ReadLine() ?? string.Empty;
+      }
+    }
+  }
+}
