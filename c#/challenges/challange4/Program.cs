@@ -153,6 +153,14 @@ public class Program
               {
                 Console.WriteLine($"Number of pages: {media.NumberOfPages}");
               }
+              else if (media is Movie movie)
+              {
+                Console.WriteLine($"Duration : {media.Duration}");
+              }
+              else if (media is Music music)
+              {
+                Console.WriteLine($"Genre : {media.Genre}");
+              }
 
             }
           }
