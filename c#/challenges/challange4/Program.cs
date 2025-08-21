@@ -162,8 +162,17 @@ public class Program
                 Console.WriteLine($"Genre : {media.Genre}");
               }
 
+              Console.WriteLine("-------------------");
             }
           }
+          Console.WriteLine("Press any key to continue...");
+          Console.ReadKey();
+          break;
+
+        default:
+          Console.WriteLine("Invalid option! Please try again.");
+          Console.WriteLine("Press any key to continue...");
+          Console.ReadKey();
           break;
       }
     }
