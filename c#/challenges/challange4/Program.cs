@@ -135,6 +135,16 @@ public class Program
 
           mediaItems.Add(m);
           break;
+        case "4":
+          if (pets.Count == 0)
+          {
+            Console.WriteLine("No pets registered.");
+          }
+          else
+          {
+            
+          }
+          break;
       }
     }
   }
