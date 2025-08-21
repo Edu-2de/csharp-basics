@@ -136,13 +136,17 @@ public class Program
           mediaItems.Add(m);
           break;
         case "4":
-          if (pets.Count == 0)
+          if (mediaItems.Count == 0)
           {
-            Console.WriteLine("No pets registered.");
+            Console.WriteLine("No media registered.");
           }
           else
           {
-            
+            Console.WriteLine("Registered medias:");
+            foreach (var media in mediaItems)
+            {
+              
+            }
           }
           break;
       }
