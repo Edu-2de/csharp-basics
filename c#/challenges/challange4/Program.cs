@@ -196,15 +196,17 @@ public class Program
                 Console.WriteLine("Music: ");
                 Music.PlaySample();
               }
-
-              if (!found)
-              {
-                Console.WriteLine("Media not found.");
-              }
               break;
             }
           }
-          
+
+          if (!found)
+          {
+            Console.WriteLine("Media not found.");
+          }
+
+          Console.WriteLine("Press any key to continue...");
+          Console.ReadKey();
           break;
 
         default:
