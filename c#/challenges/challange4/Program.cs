@@ -196,6 +196,11 @@ public class Program
                 Console.WriteLine("Music: ");
                 Music.PlaySample();
               }
+
+              if (!found)
+              {
+                Console.WriteLine("Media not found.");
+              }
               break;
             }
           }
