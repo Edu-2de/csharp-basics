@@ -57,7 +57,7 @@ public class Program
       switch (option)
       {
         case "1":
-          MediaItem m = new();
+          Book m = new();
           Console.WriteLine("Enter book's title:");
           m.Name = Console.ReadLine() ?? string.Empty;
 
@@ -65,13 +65,28 @@ public class Program
           string? bookYearInput = Console.ReadLine();
           if (!int.TryParse(bookYearInput, out int bookYear))
           {
-            Console.WriteLine("Invalid age entered. Setting age to 0.");
+            Console.WriteLine("Invalid value entered. Setting value to 0.");
             bookYear = 0;
           }
           m.Year = bookYear;
+
+          Console.WriteLine("Enter book's author:");
+          m.AuthorOrDirector = Console.Readline() ?? string.Empty;
+
+          Console.WriteLine("Enter book's number of pages:");
+          string? bookNumberInput = Console.Readline();
+          if (!int.TryParse(bookNumberInput, out int bookNumber))
+          {
+            Console.WriteLine("Invalid value entered. Setting value to 0.");
+            bookNumber = 0;
+          }
+          m.NumberOfPages = bookNumber;
           
 
           
+          
+
+
       }
     }
   }
