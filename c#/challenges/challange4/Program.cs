@@ -175,6 +175,25 @@ public class Program
           Console.WriteLine("Enter the media's title:");
           string searchTitle = Console.ReadLine() ?? string.Empty;
           bool found = false;
+
+          foreach (var media in medias)
+          {
+            if (!string.IsNullOrEmpty(pet.Name) && pet.Name.Equals(searchName, StringComparison.OrdinalIgnoreCase))
+            {
+              found = true;
+              if (pet is Dog dog)
+              {
+                Console.WriteLine("Dog sound:");
+                Dog.Bark();
+              }
+              else if (pet is Cat cat)
+              {
+                Console.WriteLine("Cat sound:");
+                Cat.Meow();
+              }
+              break;
+            }
+          }
           
           break;
 

@@ -129,13 +129,13 @@ public class Program
                             found = true;
                             if (pet is Dog dog)
                             {
-                                Console.WriteLine("Dog sound:");
-                Dog.Bark();
+                              Console.WriteLine("Dog sound:");
+                              Dog.Bark();
                             }
                             else if (pet is Cat cat)
                             {
-                                Console.WriteLine("Cat sound:");
-                Cat.Meow();
+                              Console.WriteLine("Cat sound:");
+                              Cat.Meow();
                             }
                             break;
                         }
