@@ -86,11 +86,11 @@ public class Program
           break;
 
         case "2":
-          Movie m = new();
-          Console.WriteLine("Enter movie's title:");
+          Music m = new();
+          Console.WriteLine("Enter music's title:");
           m.Name = Console.ReadLine() ?? string.Empty;
 
-          Console.WriteLine("Enter movie's year:");
+          Console.WriteLine("Enter music's year:");
           string? bookYearInput = Console.ReadLine();
           if (!int.TryParse(bookYearInput, out int bookYear))
           {
@@ -113,7 +113,7 @@ public class Program
 
           mediaItems.Add(m);
           break;
-          
+
         case "3":
           Movie m = new();
           Console.WriteLine("Enter movie's title:");
