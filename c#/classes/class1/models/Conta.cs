@@ -1,6 +1,10 @@
 using System; // Importando o namespace System
 
 class Conta {
+
+
+  public static int TotalContas { get; private set; } = 0;
+  
   public int numero;
   public int Numero{
     get { 
@@ -21,6 +25,7 @@ class Conta {
     Agencia = agencia;
     Saldo = 0;
     Titular = titular;
+    TotalContas++;
   }
 
   
