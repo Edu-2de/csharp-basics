@@ -64,7 +64,13 @@
     public int Age { get { return Aux.CalculateAge(OpeningDate); } }
     public double Revenue { get; set; }
 
-    public LegalEntity(List<Individual> partners, int cnpj, string stateRegistration, string fantasyName, int )
+    public LegalEntity(List<Individual> partners, int cnpj, string corporateName, string fantasyName, int stateRegistration, DateTime openingDate, double revenue, string address, string phone, string email)
+    {
+      Id = ++NumberOfPeoples;
+      Partners = partners;
+      Cnpj = cnpj;
+      CorporateName = corporateName;
+    }
   }
 
 }
