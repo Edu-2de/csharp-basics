@@ -97,8 +97,8 @@
         FeeWithdrawal = feeWithdrawal;
     }
 
-    public abstract bool Sacar(double valor);
-    public double ConsultarSaldo() => Saldo;
+    public abstract bool Withdraw(double valor);
+    public double CheckBalance() => Saldo;
     public virtual bool Transferir(Conta conta, double valor)
     {
         if (Sacar(valor))
