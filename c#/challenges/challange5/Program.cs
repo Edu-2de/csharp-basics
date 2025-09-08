@@ -28,4 +28,11 @@
     public string Email { get; set; }
   }
 
+  public abstract class Individual : People
+  {
+    public string Name { get; set; }
+    public string LastName { get; set; }
+    public string Rg { get; set; }
+  }
+
 }
