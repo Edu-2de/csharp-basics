@@ -56,6 +56,10 @@
   public class LegalEntity : People
   {
     public List<Individual> Partners { get; set; } = new List<Individual>();
+    public int Cnpj { get; set; }
+    public string CorporateName { get; set; }
+    public string FantasyName { get; set; }
+    public int StateRegistration { get; set; }
   }
 
 }
