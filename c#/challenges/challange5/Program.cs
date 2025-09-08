@@ -99,17 +99,17 @@
 
     public abstract bool Withdraw(double valor);
     public double CheckBalance() => Saldo;
-    public virtual bool Transferir(Conta conta, double valor)
+    public virtual bool Transfer(Account account, double value)
     {
-        if (Sacar(valor))
+        if (Withdraw(value))
         {
-            conta.Depositar(valor);
+            conta.Deposit(value);
             return true;
         }
         return false;
     }
 
-    public abstract void Depositar(double valor);
+    public abstract void Deposit(double value);
   }
 
 }
