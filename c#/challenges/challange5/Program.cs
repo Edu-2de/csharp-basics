@@ -70,6 +70,13 @@
       Partners = partners;
       Cnpj = cnpj;
       CorporateName = corporateName;
+      FantasyName = fantasyName;
+      StateRegistration = stateRegistration;
+      OpeningDate = openingDate;
+      Revenue = revenue;
+      Address = address;
+      Phone = phone;
+      Email = email;
     }
   }
 
