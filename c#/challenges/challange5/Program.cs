@@ -9,5 +9,17 @@
       if (data.Date > today.AddYears(-age)) age--;
       return age;
     }
+
+    public static AgeRange(int age)
+    {
+      if (age <= 11) return "kid";
+      else if (age <= 21) return "young";
+      else if (age <= 59) return "adult";
+      else return "old";
+    }
+
   }
+
+
+  
 }
