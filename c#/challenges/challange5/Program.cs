@@ -28,7 +28,7 @@
     public string Email { get; set; }
   }
 
-  public abstract class Individual : People
+  public class Individual : People
   {
     public string Name { get; set; }
     public string LastName { get; set; }
@@ -51,6 +51,11 @@
       Phone = phone;
       Email = email;
     }
+  }
+
+  public class LegalEntity : People
+  {
+    public List<Individual> Partners { get; set; } = new List<Individual>();
   }
 
 }
