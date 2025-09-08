@@ -80,4 +80,10 @@
     }
   }
 
+  public abstract class Account
+  {
+    public People Titular { get; set; }
+    public long Number { get; set; }
+  }
+
 }
