@@ -45,7 +45,11 @@
       LastName = lastName;
       Rg = rg;
       Cpf = cpf;
-
+      DateBorn = dateBorn;
+      Income = income;
+      Address = address;
+      Phone = phone;
+      Email = email;
     }
   }
 
