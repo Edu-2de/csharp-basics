@@ -5,6 +5,8 @@
     public static int CalculateAge(DateTime data)
     {
       var today = DateTime.Today;
+      int age = today.Year - data.Year;
+      
     }
   }
 }
