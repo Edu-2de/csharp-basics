@@ -63,6 +63,8 @@
     public DateTime OpeningDate { get; set; }
     public int Age { get { return Aux.CalculateAge(OpeningDate); } }
     public double Revenue { get; set; }
+
+    public LegalEntity(List<Individual> partners, int cnpj, string stateRegistration, string fantasyName, int )
   }
 
 }
