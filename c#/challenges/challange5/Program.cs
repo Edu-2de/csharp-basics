@@ -88,28 +88,28 @@
     public double Balance { get; protected set; }
     public double FeeWithdrawal { get; set; }
 
-        public Account(Pessoa titular, long number, int agency, double feeWithdrawal)
-        {
-            Titular = titular;
-            Number = number;
-            Agency = agency;
-            Balance = 0.0;
-            FeeWithdrawal = feeWithdrawal;
-        }
+    public Account(Pessoa titular, long number, int agency, double feeWithdrawal)
+    {
+        Titular = titular;
+        Number = number;
+        Agency = agency;
+        Balance = 0.0;
+        FeeWithdrawal = feeWithdrawal;
+    }
 
-        public abstract bool Sacar(double valor);
-        public double ConsultarSaldo() => Saldo;
-        public virtual bool Transferir(Conta conta, double valor)
+    public abstract bool Sacar(double valor);
+    public double ConsultarSaldo() => Saldo;
+    public virtual bool Transferir(Conta conta, double valor)
+    {
+        if (Sacar(valor))
         {
-            if (Sacar(valor))
-            {
-                conta.Depositar(valor);
-                return true;
-            }
-            return false;
+            conta.Depositar(valor);
+            return true;
         }
+        return false;
+    }
 
-        public abstract void Depositar(double valor);
+    public abstract void Depositar(double valor);
   }
 
 }
