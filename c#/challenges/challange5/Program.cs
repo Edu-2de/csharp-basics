@@ -17,9 +17,11 @@
       else if (age <= 59) return "adult";
       else return "old";
     }
-
   }
 
+  public abstract class People
+  {
+    
+  }
 
-  
 }
