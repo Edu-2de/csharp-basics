@@ -38,7 +38,7 @@
     public string AgeRange { get { return Aux.CalculateAge(age); } }
     public double Income { get; set; }
 
-    public Individual(string name, string lastName, string rg, string cpf, DateTime dateBorn, string address, string phone, string email)
+    public Individual(string name, string lastName, string rg, string cpf, DateTime dateBorn, double income, string address, string phone, string email)
     {
       Id = ++NumberOfPeoples;
       Name = name;
