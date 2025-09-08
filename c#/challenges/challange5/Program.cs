@@ -60,6 +60,9 @@
     public string CorporateName { get; set; }
     public string FantasyName { get; set; }
     public int StateRegistration { get; set; }
+    public DateTime OpeningDate { get; set; }
+    public int Age { get { return Aux.CalculateAge(OpeningDate); } }
+    public double Revenue { get; set; }
   }
 
 }
