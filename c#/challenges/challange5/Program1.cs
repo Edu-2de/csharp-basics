@@ -12,13 +12,29 @@ namespace Biblioteca {
     public class Leitor:Pessoa{
         public DateTime DataNascimento{get;set;}
 
-        public Leitor(DateTime dataNascimento, int id, string nome, string email, string endereco, string telefone, ){
+        public Leitor(DateTime dataNascimento, int id, string nome, string email, string endereco, string telefone){
             Id = ++NumeroDePessoas;
             Nome = nome;
             Email = email;
             Endereco = endereco;
             Telefone = telefone;
             DataNascimento = dataNascimento;
+        }
+    }
+
+    public class Funcionario:Pessoa{
+        public string Cargo{get;set;}
+        public DateTime DataAdmisso{get;set;}
+
+        public Funcionario(string cargo, DateTime dataAdmisso, int id, string nome, string email, string endereco, string telefone){
+            Id = ++NumeroDePessoas;
+            Nome = nome;
+            Email = email;
+            Endereco = endereco;
+            Telefone = telefone;
+            Cargo = cargo;
+            DataAdmisso = dataAdmisso;
+
         }
     }
 }
