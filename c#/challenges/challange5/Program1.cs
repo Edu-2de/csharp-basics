@@ -37,4 +37,14 @@ namespace Biblioteca {
 
         }
     }
+
+    public class Livro{
+        public static int NumeroDeLivros { get; set; } = 0;
+        public int Id{get;set;}
+        public string Titulo {get; set;}
+        public string Autor {get;set;}
+        public int AnoPublicacao{get;set;}
+
+
+    }
 }
