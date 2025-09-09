@@ -8,8 +8,26 @@ namespace Biblioteca {
         public string Email{get;set;}
     }
 
+    public class Livro{
+        public static int NumeroDeLivros { get; set; } = 0;
+        public int Id{get;set;}
+        public string Titulo {get; set;}
+        public string Autor {get;set;}
+        public int AnoPublicacao{get;set;}
+        public string Genero{get;set;}
+        public bool Disponivel  {get; set;}
+    }
+
+    public class Emprestimo{
+        public Livro Livro{get;set;}
+        public Leitor Leitor{get; set;}
+        public DateTime DataEmprestimo{get;set;}
+        public DateTime? DataRetorno{get;set;}
+    }
+
 
     public class Leitor:Pessoa{
+        public List<Emprestimo> Emprestimos { get; set; } = new List<Emprestimo>();
         public DateTime DataNascimento{get;set;}
 
         public Leitor(DateTime dataNascimento, int id, string nome, string email, string endereco, string telefone){
@@ -19,6 +37,22 @@ namespace Biblioteca {
             Endereco = endereco;
             Telefone = telefone;
             DataNascimento = dataNascimento;
+        }
+
+        public bool EmprestarLivro(Livro livro){
+            if (Emprestimos.Count >= 5 || !livro.Disponivel)
+                return false;
+
+            var emprestimo = new Emprestimo
+            {
+                Livro = livro,
+                Leitor = this,
+                DataEmprestimo = DateTime.Now,
+                DataRetorno = null
+            };
+            Emprestimos.Add(emprestimo);
+            livro.Disponivel = false;
+            return true;
         }
     }
 
@@ -38,22 +72,5 @@ namespace Biblioteca {
         }
     }
 
-    public class Livro{
-        public static int NumeroDeLivros { get; set; } = 0;
-        public int Id{get;set;}
-        public string Titulo {get; set;}
-        public string Autor {get;set;}
-        public int AnoPublicacao{get;set;}
-        public string Genero{get;set;}
-        public bool Disponivel  {get; set;}
-    }
-
-    public class Emprestimo{
-        public Livro Livro{get;set;}
-        public Leitor Leitor{get; set;}
-        public DateTime DataEmprestimo{get;set;}
-        public DateTime? DataRetorno{get;set;}
-        
-
-    }
+   
 }
