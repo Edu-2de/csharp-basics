@@ -54,6 +54,16 @@ namespace Biblioteca {
             livro.Disponivel = false;
             return true;
         }
+
+        public bool DevolverLivro(Livro livro){
+            var emprestimo = Emprestimos.FirstOrDefault(e => e.Livro == livro && e.DataRetorno == null);
+            if (emprestimo == null)
+                return false; 
+
+            emprestimo.DataRetorno = DateTime.Now;
+            livro.Disponivel = true;
+            return true;
+        }
     }
 
     public class Funcionario:Pessoa{
